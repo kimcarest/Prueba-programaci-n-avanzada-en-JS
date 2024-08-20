@@ -1,0 +1,137 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+  background-color: #FFFB7D;
+  background-image: linear-gradient(45deg, #85FFBD 0%, #FFFB7D 100%);
+  background-position: top left;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  padding: 25px 5px;
+  align-items: center;
+  min-height: 100vh;
+}
+
+  @media screen and (min-width: 576px) {
+    body {
+    padding: 37px 25px;
+    }
+  }
+
+
+#Tabla,
+#contenedor_formulario_card {
+  opacity: 0.9;
+}
+#preview {
+  width: 80%;
+  max-width: 100px;
+  aspect-ratio: 1/1;
+  object-position: top;
+  object-fit: cover;
+  margin: auto;
+  display: block;
+  @media screen and (min-width: 768px) {
+    width: 60%;
+  }
+}
+
+#Tabla {
+  max-width: 800px;
+  height: 500px;
+  @media screen and (min-width: 768px) {
+    height: 100%;
+  }
+}
+#Animales {
+  height: 100%;
+  max-height: 430px;
+  overflow-y: auto;
+  background: #f0f0f0;
+}
+
+#Animales div div {
+  transition: all 200ms;
+}
+
+#Animales div > div:hover:not(.animal_insertado_close) {
+  box-shadow: 0px 1px 5px 1px;
+}
+
+.participante {
+  max-width: 30%;
+}
+
+#comentarios {
+  resize: none;
+}
+
+/* Modal */
+
+/*.modal-dialog {
+  max-width: 85% !important;
+}*/
+.modal-body {
+  color: white;
+  text-align: center;
+}
+
+.modal-body img {
+  width: 70%;
+  max-width: 300px;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  margin: auto;
+  display: block;
+}
+.modal-body_comentarios_contenido {
+  height: 5rem;
+  overflow-y: auto;
+  word-wrap: break-word;
+  width: 100%;
+}
+.modal-body_comentarios_titulo {
+  text-decoration: underline;
+}
+
+.animal_insertado {
+  width: 100px;
+  position: relative;
+  height: fit-content;
+}
+
+.animal_insertado_close {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  color: white;
+  cursor: pointer;
+}
+
+.animal_insertado img {
+  object-fit: cover;
+  width: 100%;
+  aspect-ratio: 1/1;
+  cursor: pointer;
+}
+.animal_insertado button {
+  width: 100%;
+  background-color: #eee;
+  border: 0;
+}
+.animal_insertado button:hover {
+  background-color: rgb(22, 2, 206);
+  color: rgba(100, 241, 6, 0.836);
+}
+.contenedor_animales {
+  gap: 10px;
+
+  display: grid;
+  justify-items: center;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+}
